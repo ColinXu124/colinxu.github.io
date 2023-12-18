@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>启宁日记</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+/* 基础样式 */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f3f3f3;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.about, .gallery, .video {
+    margin-bottom: 40px;
+}
+
+.about h2, .gallery h2, .video h2, .contact h2 {
+    border-bottom: 2px solid #007bff;
+    color: #333;
+    padding-bottom: 5px;
+}
+
+.about p, .contact p {
+    font-size: 1.1em;
+    color: #444;
+    line-height: 1.8;
+}
+
+.gallery img, .video video {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    margin-bottom: 10px;
+}
+
+.item {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.item p {
+    margin-top: 5px;
+    color: #666;
+    font-style: italic;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    font-size: 0.8em;
+}
+
+/* Timeline 样式 */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 20px auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: #007bff;
+    top: 0;
+    bottom: 0;
+    left: 30px;
+}
+
+.timeline .container {
+    position: relative;
+    background-color: inherit;
+    padding: 10px 30px 10px 60px;
+    margin-left: 50px;
+    margin-bottom: 15px;
+}
+
+.timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    left: -15px;
+    background-color: white;
+    border: 3px solid #007bff;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.timeline .content {
+    background-color: white;
+    position: relative;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.timeline .content h2 {
+    margin-top: 0;
+    font-size: 16px;
+    color: #007bff;
+}
+
+.timeline .content p {
+    font-size: 14px;
+}
+
+.email-block {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    margin-top: 40px;
+    border-radius: 5px;
+}
+
+.email-block a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.email-block a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .gallery, .video {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .gallery .item, .video .item {
+        width: 48%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery .item, .video .item {
+        width: 31%;
+    }
+}
+
+pre {
+     background-color: #f8f8f8;
+     border: 1px solid #ddd;
+     padding: 15px;
+     border-radius: 5px;
+     overflow: auto;
+     line-height: 1.5;
+     font-size: 1.05em;
+}
+code {
+    font-family: 'Courier New', Courier, monospace;
+    color: #333;
+    text-align: left;
+    display: block;
+}
+.keyword { color: #0000FF; }
+.datatype { color: #2b91af; }
+.comment { color: #008000; }
+.preprocessor { color: #800080; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>徐启宁的成长日记</h1>
+</header>
+
+<div class="container">
+    <section class="about" id="about">
+        <h2>关于我</h2>
+        <p>大家好，我是徐启宁（徐啟寧，Colin Xu），2023年12月4日在香港出生，一出生就是一个51.2cm的大高个，也是一个每天吃8顿的小壮汉。虽然，我才出生不到一个月，但是我已经坐火车，游览过祖国的广东，福建，浙江啦，现在长居上海，欢迎大家来找我玩~</p>
+    <div class="timeline" id="timeline">
+    <div class="container left">
+        <div class="content">
+            <h2>2023年12月4日</h2>
+            <p>呱呱坠地，成为一个香港仔！</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>2023年12月6日</h2>
+            <p>从医院俯瞰赛马和烟花！</p>
+        </div>
+    </div>
+    <div class="container left">
+        <div class="content">
+            <h2>2023年12月7日</h2>
+            <p>出院办证，从此就是有身份的人啦！</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2023年12月14日</h2>
+            <p>坐火车从香港出发，周游广东、福建和浙江，定居上海。</p>
+        </div>
+    </div>
+    <div class="container right">
+        <div class="content">
+            <h2>2023年12月21日</h2>
+            <p>转眼，成为一个55cm的巨人！</p>
+        </div>
+    </div>
+    <!-- 更多事件 -->
+    </div>
+    </section>
+    <section class="gallery" id="gallery">
+        <h2>画廊</h2>
+        <!-- 图片和描述 -->
+        <div class="item">
+            <img src="images/p1.jpg" alt="这是我刚出生的时候，还有点睁不开眼，谁把灯开这么亮的。刚才还是在水里漆黑一片的！">
+<pre><code>
+<span class="preprocessor">#include &lt;iostream&gt;</span>
+
+<span class="keyword">template&lt;int N&gt;</span>
+<span class="datatype">struct</span> HelloWorld {
+    <span class="keyword">static const char*</span> value;
+};
+
+<span class="keyword">template&lt;&gt;</span>
+<span class="keyword">const char*</span> HelloWorld&lt;0&gt;::value = <span class="comment">"Hello, World!\n"</span>;
+
+<span class="datatype">int</span> main() {
+    std::cout &lt;&lt; HelloWorld&lt;0&gt;::value;
+    <span class="keyword">return</span> 0;
+}
+</code></pre>
+            <p>这是我刚出生的时候，还有点睁不开眼，谁把灯开这么亮的。刚才还是在水里漆黑一片的！</p>
+        </div>
+        <div class="item">
+            <img src="images/p2.jpg" alt="医院的沙发睡起来感觉不错！爸妈能看出来，我的尿不湿已经满了吗？">
+            <p>医院的沙发睡起来感觉不错！爸妈能看出来，我的尿不湿已经满了吗？</p>
+        </div>
+        <div class="item">
+            <img src="images/p3.jpg" alt="这就是单反相机么？">
+            <p>这就是单反相机么？</p>
+        </div>
+        <div class="item">
+            <img src="images/p4.jpg" alt="吐个舌头试试">
+            <p>吐个舌头试试</p>
+        </div>
+        <div class="item">
+            <img src="images/p5.jpg" alt="撑不住了，好困呀">
+            <p>撑不住了，好困呀</p>
+        </div>
+        <div class="item">
+            <img src="images/p6.jpg" alt="出院啦！坐上我的豪车">
+            <p>出院啦！坐上我的豪车</p>
+        </div>
+        <div class="item">
+            <img src="images/p7.jpg" alt="我和我心爱的兔兔">
+            <p>我和我心爱的兔兔</p>
+        </div>
+        <div class="item">
+            <img src="images/p8.jpg" alt="造型不是我自愿的！">
+            <p>这个造型不是我自愿的！</p>
+        </div>
+        <div class="item">
+            <img src="images/p9.jpg" alt="rock and roll!">
+            <p>rock and roll!</p>
+        </div>
+        <div class="item">
+            <img src="images/p10.jpg" alt="砂锅那么大的拳头！">
+            <p>砂锅那么大的拳头！</p>
+        </div>
+        <div class="item">
+            <img src="images/p11.jpg" alt="我是灵长类">
+            <p>我是灵长类</p>
+        </div>
+        <div class="item">
+            <img src="images/p12.jpg" alt="看我酒窝">
+            <p>看我酒窝</p>
+        </div>
+        <!-- 重复以上结构添加更多图片和描述，直到 _p12.jpg -->
+    </section>
+
+    <section class="video" id="videos">
+        <h2>视频</h2>
+        <!-- 视频 -->
+        <div class="item">
+            <video controls>
+                <source src="videos/v1.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>这是哪儿呀？</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v2.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>还是趴着舒服~</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v3.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>天亮了么？</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v4.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>这怎么吃不出奶？我再用力一点！</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v5.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>抬头真舒服呀！他们不会说我肌张力过高吧，但是我就喜欢抬头呀</p>
+        </div>
+        <!-- 重复以上结构添加更多视频和描述，直到 _v5.mp4 -->
+    </section>
+    <section class="contact" id="contact">
+    <div class="email-block">
+    <h2>联系我</h2>
+    <p>如果您有任何话想跟我讲，请随时通过以下链接发送电子邮件：</p>
+    <a href="mailto:colinxu124@gmail.com">发送邮件给徐启宁！！</a>
+</div>
+    </section>
+</div>
+
+
+<footer>
+    <p>版权所有 &copy; 2023 徐启宁</p>
+</footer>
+
+</body>
+</html>
+

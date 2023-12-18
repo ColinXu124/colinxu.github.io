@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>徐启宁的成长主页</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f3f3f3;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            background: #f4f4f4;
+        }
+        nav a {
+            color: #333;
+            text-decoration: none;
+            padding: 0 15px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #007bff;
+        }
+        .about, .gallery, .video, .comments {
+            margin-bottom: 40px;
+        }
+        .about h2, .gallery h2, .video h2, .comments h2 {
+            border-bottom: 2px solid #007bff;
+            color: #333;
+            padding-bottom: 5px;
+        }
+        .about p {
+            font-size: 1.1em;
+            color: #444;
+            line-height: 1.8;
+        }
+        .gallery img, .video video {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,.2);
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover, .video video:hover {
+            transform: scale(1.05);
+        }
+        .item {
+            margin-bottom: 20px;
+        }
+        .item p {
+            margin-top: 5px;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #333;
+            color: #fff;
+            font-size: 0.8em;
+        }
+        .comment-box {
+            padding: 10px;
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .comment-box textarea {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            resize: vertical;
+        }
+        .comment-box button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .comment-box button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>徐启宁的成长主页</h1>
+</header>
+
+<nav>
+    <a href="#about">关于我</a>
+    <a href="#gallery">画廊</a>
+    <a href="#videos">视频</a>
+    <a href="#comments">留言</a>
+</nav>
+
+<div class="container">
+    <section class="about" id="about">
+        <h2>关于我</h2>
+        <p>大家好，我是徐启宁（徐啟寧，Colin Xu），2023年12月4日在香港出生，一出生就是一个51.2cm的大高个，也是一个每天吃8顿的小壮汉。虽然，我才出生不到一个月，但是我已经坐火车，游览过祖国的广东，福建，浙江啦，现在长居上海，欢迎大家来找我玩~</p>
+    </section>
+
+    <section class="gallery" id="gallery">
+        <h2>画廊</h2>
+        <!-- 图片和描述 -->
+        <div class="item">
+            <img src="images/p1.jpg" alt="这是我刚出生的时候，还有点睁不开眼，谁把灯开这么亮的。刚才还是在水里漆黑一片的！">
+            <p>这是我刚出生的时候，还有点睁不开眼，谁把灯开这么亮的。刚才还是在水里漆黑一片的！</p>
+        </div>
+        <div class="item">
+            <img src="images/p2.jpg" alt="医院的沙发睡起来感觉不错！爸爸能看出来，我的尿不湿已经满了吗？">
+            <p>医院的沙发睡起来感觉不错！爸爸能看出来，我的尿不湿已经满了吗？</p>
+        </div>
+        <div class="item">
+            <img src="images/p3.jpg" alt="这就是单反相机么？">
+            <p>这就是单反相机么？</p>
+        </div>
+        <div class="item">
+            <img src="images/p4.jpg" alt="吐个舌头试试">
+            <p>吐个舌头试试</p>
+        </div>
+        <div class="item">
+            <img src="images/p5.jpg" alt="撑不住了，好困呀">
+            <p>撑不住了，好困呀</p>
+        </div>
+        <div class="item">
+            <img src="images/p6.jpg" alt="出院啦！坐上我的豪车">
+            <p>出院啦！坐上我的豪车</p>
+        </div>
+        <div class="item">
+            <img src="images/p7.jpg" alt="我和我心爱的兔兔">
+            <p>我和我心爱的兔兔</p>
+        </div>
+        <div class="item">
+            <img src="images/p8.jpg" alt="rock and roll!">
+            <p>rock and roll!</p>
+        </div>
+        <div class="item">
+            <img src="images/p9.jpg" alt="造型不是我自愿的！">
+            <p>造型不是我自愿的！</p>
+        </div>
+        <div class="item">
+            <img src="images/p10.jpg" alt="砂锅那么大的拳头！">
+            <p>砂锅那么大的拳头！</p>
+        </div>
+        <div class="item">
+            <img src="images/p11.jpg" alt="我是灵长类">
+            <p>我是灵长类</p>
+        </div>
+        <div class="item">
+            <img src="images/p12.jpg" alt="看我酒窝">
+            <p>看我酒窝</p>
+        </div>
+        <!-- 重复以上结构添加更多图片和描述，直到 _p12.jpg -->
+    </section>
+
+    <section class="video" id="videos">
+        <h2>视频</h2>
+        <!-- 视频 -->
+        <div class="item">
+            <video controls>
+                <source src="videos/v1.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>这是哪儿呀？</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v2.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>还是趴着舒服~</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v3.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>天亮了么？</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v4.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>这怎么吃不出奶？我再用力一点！</p>
+        </div>
+        <div class="item">
+            <video controls>
+                <source src="videos/v5.mp4" type="video/mp4">
+                您的浏览器不支持视频标签。
+            </video>
+            <p>抬头真舒服呀！他们不会说我肌张力过高吧，但是我就喜欢抬头呀</p>
+        </div>
+        <!-- 重复以上结构添加更多视频和描述，直到 _v5.mp4 -->
+    </section>
+
+    <section class="comments" id="comments">
+        <h2>留言</h2>
+        <div class="comment-box">
+            <textarea placeholder="留下您的评论..."></textarea>
+            <button onclick="submitComment()">提交</button>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>版权所有 &copy; 2023 徐启宁</p>
+</footer>
+
+<script>
+    function submitComment() {
+        // 模拟提交评论
+        alert("感谢您的评论！");
+    }
+</script>
+
+</body>
+</html>
+
