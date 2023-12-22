@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title>启宁日记</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
+  />
+
     <style>
 /* 基础样式 */
 body {
@@ -365,7 +370,7 @@ code {
 <script src="https://unpkg.com/commentbox.io/dist/commentBox.min.js"></script>
 <script>commentBox('5665404747776000-proj')</script> -->
 <!-- 来必力City版安装代码 -->
-<div id="lv-container" data-id="city" data-uid="MTAyMC81OTMzNS8zNTc5Nw==">
+<!-- <div id="lv-container" data-id="city" data-uid="MTAyMC81OTMzNS8zNTc5Nw==">
 	<script type="text/javascript">
    (function(d, s) {
        var j, e = d.getElementsByTagName(s)[0];
@@ -381,7 +386,16 @@ code {
 	</script>
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
-<!-- City版安装代码已完成 -->
+City版安装代码已完成 -->
+  <div id="waline"></div>
+  <script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+
+    init({
+      el: '#waline',
+      serverURL: 'https://your-domain.vercel.app',
+    });
+  </script>
     <section class="contact" id="contact">
     <div class="email-block">
     <h2>联系我</h2>
