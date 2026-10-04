@@ -48,10 +48,44 @@
     <meta charset="UTF-8">
     <title>启宁日记</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/@waline/client@v2/dist/waline.css"
-  />
+  <style>
+/* 历史留言：样式仅作用于此归档区域。 */
+.memory-archive { margin: 40px 0; color: #333; overflow-wrap: anywhere; }
+.memory-archive > h2 { border-bottom: 2px solid #007bff; padding-bottom: 5px; }
+.memory-archive .memory-intro { color: #555; margin-bottom: 6px; }
+.memory-archive .memory-summary { color: #666; font-size: .875rem; margin: 0 0 24px; }
+.memory-archive .memory-threads, .memory-archive .memory-replies { list-style: none; padding: 0; margin: 0; }
+.memory-archive .memory-thread { margin: 0 0 22px; }
+.memory-archive .memory-comment { background: #fafafa; border: 1px solid #e6e6e6; border-radius: 6px; padding: 18px; scroll-margin-top: 20px; min-width: 0; }
+.memory-archive .memory-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; margin-bottom: 10px; }
+.memory-archive .memory-author { font-weight: 600; color: #333; }
+.memory-archive .memory-date { color: #777; font-size: .8rem; }
+.memory-archive .memory-pinned { color: #666; font-size: .8rem; }
+.memory-archive .memory-body { line-height: 1.8; min-width: 0; }
+.memory-archive .memory-body p { margin: 0 0 12px; }
+.memory-archive .memory-body > :last-child { margin-bottom: 0; }
+.memory-archive .memory-body a { color: #007bff; text-decoration: none; }
+.memory-archive .memory-body a:hover { text-decoration: underline; }
+.memory-archive .memory-body img { display: block; width: auto; max-width: 100%; height: auto; border-radius: 4px; margin: 10px 0; }
+.memory-archive .memory-body img.memory-emoji { display: inline-block; width: 1.5em; height: 1.5em; max-width: none; vertical-align: -.35em; margin: 0 .1em; border-radius: 0; }
+.memory-archive .memory-body pre { max-width: 100%; box-sizing: border-box; overflow-x: auto; background: #f3f3f3; border: 1px solid #ddd; padding: 12px; border-radius: 4px; font-size: .85rem; line-height: 1.5; white-space: pre; overflow-wrap: normal; }
+.memory-archive .memory-body code { display: inline; font-family: 'Courier New', Courier, monospace; font-size: inherit; }
+.memory-archive .memory-body pre code { display: block; }
+.memory-archive .token.keyword, .memory-archive .token.boolean { color: #0000ff; }
+.memory-archive .token.comment { color: #008000; }
+.memory-archive .token.string { color: #a31515; }
+.memory-archive .token.number { color: #098658; }
+.memory-archive .token.class-name, .memory-archive .token.function { color: #795e26; }
+.memory-archive .memory-likes { margin: 12px 0 0; color: #666; font-size: .85rem; }
+.memory-archive .memory-replies { margin-top: 14px; margin-left: 18px; padding-left: 14px; border-left: 2px solid #dce9f7; }
+.memory-archive .memory-replies > li { margin-top: 14px; }
+.memory-archive .memory-replies .memory-comment { background: #fff; }
+@media (max-width: 600px) {
+  .memory-archive .memory-comment { padding: 12px; }
+  .memory-archive .memory-replies { margin-left: 6px; padding-left: 8px; }
+  .memory-archive .memory-meta { gap: 3px 8px; }
+}
+  </style>
 
     <style>
 /* 基础样式 */
@@ -432,15 +466,418 @@ code {
 <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
 </div>
 City版安装代码已完成 -->
-  <div id="waline"></div>
-  <script type="module">
-    import { init } from 'https://unpkg.com/@waline/client@v2/dist/waline.mjs';
+  <section class="memory-archive" id="memory-archive" aria-labelledby="memory-archive-title">
+    <h2 id="memory-archive-title">那时，大家的祝福</h2>
+    <p class="memory-intro">宝宝出生时留下的留言与回应，原样珍藏于此。</p>
+    <p class="memory-summary">18 条留言 · 15 条回应 · 139 个赞<span aria-hidden="true"> · </span>时间为北京时间（UTC+8）</p>
+    <ol class="memory-threads">
+<li class="memory-thread"><article class="memory-comment" id="6585a86135a11e14ba48bbd0">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-22T23:16:48.571+08:00">2023-12-22 23:16:48</time><span class="memory-pinned">置顶留言</span>
+</div>
+<div class="memory-body"><p>徐总小壮汉，针不戳呀！<img src="memory-5de9296986a14a10e2158bf5.gif" alt="" width="346" height="249" loading="lazy" decoding="async"></p>
+</div>
+<p class="memory-likes">赞 · 11</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="659b77f91f76074ba4b8cf9d">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2024-01-08T12:20:08.384+08:00">2024-01-08 12:20:08</time>
+</div>
+<div class="memory-body"><p>小朋友，欢迎来到这个世界。愿你健康快乐～</p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="6592a1f535a11e14ba4ceac0">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2024-01-01T19:28:52.212+08:00">2024-01-01 19:28:52</time>
+</div>
+<div class="memory-body"><p>啟寧宝贝，你在干啥呢？奶奶又来看照片了，你爸爸妈妈可能近段时间很忙，好久都没有上新照片和记录了。奶奶只好翻看一下以前的照片，留下奶奶的祝福！祝我的宝贝健健康康，会吃会睡！自从有了你，奶奶的心就牵挂你，虽然没有线下见面，但是你在香港，奶奶的心就在香港，你回上海月子中心，奶奶的心就在上海月子中心。爱❤️我的宝贝</p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="65923afde98180051f198bb5">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2024-01-01T12:09:32.353+08:00">2024-01-01 12:09:32</time>
+</div>
+<div class="memory-body"><p>啟寧宝贝，今天是2024年的第一天，你快满月了哦，看你妈妈发的照片，你长大了不少呢！👍新年第一天，奶奶祝你健康成长！快快乐乐！🥰🥰🥰</p>
+</div>
+<p class="memory-likes">赞 · 4</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658e8512e98180051f1813db">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-29T16:36:33.237+08:00">2023-12-29 16:36:33</time>
+</div>
+<div class="memory-body"><p>啟寧宝贝，我又来看照片了，每天都要来看有没有新照片，已经三天没有看到你了，奶奶想你了🥰，你想奶奶没？<img src="memory-78cbaf21ce16847e36b11cc0.png" alt="weibo_love" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 4</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658c142be98180051f171675">
+<div class="memory-meta">
+<span class="memory-author">凡姐</span>
+<time class="memory-date" datetime="2023-12-27T20:10:18.668+08:00">2023-12-27 20:10:18</time>
+</div>
+<div class="memory-body"><p>妈妈希望你是善良，正直，乐观，自律的人，健康，自由，人生比我们的精彩～😝ོ</p>
+</div>
+<p class="memory-likes">赞 · 9</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="658d9518e98180051f17a1bb">
+<div class="memory-meta">
+<span class="memory-author">老徐</span>
+<time class="memory-date" datetime="2023-12-28T23:32:39.628+08:00">2023-12-28 23:32:39</time>
+</div>
+<div class="memory-body"><p><a href="#658c142be98180051f171675">@凡姐</a>: 妈妈的希望，一定能实现！</p>
+</div>
+<p class="memory-likes">赞 · 1</p>
+</article>
+</li>
+</ol>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a341ee98180051f169c16">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-26T10:02:06.106+08:00">2023-12-26 10:02:06</time>
+</div>
+<div class="memory-body"><p>宝贝，奶奶是你的粉丝，又把你的照片看了一遍，爱了爱了爱了<img src="memory-78cbaf21ce16847e36b11cc0.png" alt="weibo_love" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 4</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a328135a11e14ba49e8b3">
+<div class="memory-meta">
+<span class="memory-author">老徐</span>
+<time class="memory-date" datetime="2023-12-26T09:55:12.268+08:00">2023-12-26 09:55:12</time>
+</div>
+<div class="memory-body"><p>小小徐，志向远大，棒棒的！</p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a3229e98180051f169be3">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-26T09:53:43.858+08:00">2023-12-26 09:53:43</time>
+</div>
+<div class="memory-body"><p>宝贝，你在干啥呢？好玩吧<img src="memory-78cbaf21ce16847e36b11cc0.png" alt="weibo_love" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 2</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="6588ecf035a11e14ba499b0d">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-25T10:46:07.767+08:00">2023-12-25 10:46:07</time>
+</div>
+<div class="memory-body"><p><img src="memory-78cbaf21ce16847e36b11cc0.png" alt="weibo_love" width="64" height="64" class="memory-emoji"><img src="memory-78cbaf21ce16847e36b11cc0.png" alt="weibo_love" width="64" height="64" class="memory-emoji"><img src="memory-78cbaf21ce16847e36b11cc0.png" alt="weibo_love" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 1</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="6588e64535a11e14ba499a13">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-25T10:17:37.897+08:00">2023-12-25 10:17:37</time>
+</div>
+<div class="memory-body"><p>圣诞限定款徐总<br>
+<img src="memory-702670a211eff543ac1df55f.jpg" alt="IMG_7191.jpeg" width="750" height="500" loading="lazy" decoding="async"></p>
+</div>
+<p class="memory-likes">赞 · 8</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="658a3163e98180051f169bcb">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-26T09:50:25.917+08:00">2023-12-26 09:50:25</time>
+</div>
+<div class="memory-body"><p><a href="#6588e64535a11e14ba499a13">@小徐</a>: 亲亲宝贝，平安快乐！幸福吉祥！<img src="memory-78cbaf21ce16847e36b11cc0.png" alt="weibo_love" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+</ol>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="6586b30235a11e14ba4901ce">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-23T18:14:21.543+08:00">2023-12-23 18:14:21</time>
+</div>
+<div class="memory-body"><p>进军CBA🇨🇳！<br>
+<img src="memory-f3db3a7c4c57fd03a9c819ab.jpg" alt="IMG_7187.jpeg" width="750" height="500" loading="lazy" decoding="async"></p>
+</div>
+<p class="memory-likes">赞 · 8</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="6586fc9ee98180051f15cabd">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-23T23:28:29.261+08:00">2023-12-23 23:28:29</time>
+</div>
+<div class="memory-body"><p><a href="#6586b30235a11e14ba4901ce">@小徐</a>: <img src="memory-04c316f6abf30ff78e01e42a.gif" alt="" width="300" height="350" loading="lazy" decoding="async"></p>
+</div>
+<p class="memory-likes">赞 · 4</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a3039e98180051f169b9e">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-26T09:45:27.936+08:00">2023-12-26 09:45:27</time>
+</div>
+<div class="memory-body"><p><a href="#6586b30235a11e14ba4901ce">@小徐</a>: 篮球打起来，帅小伙，向姚明靠近😀</p>
+</div>
+<p class="memory-likes">赞 · 2</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a30e4e98180051f169bbf">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-26T09:48:19.746+08:00">2023-12-26 09:48:19</time>
+</div>
+<div class="memory-body"><p><a href="#6586b30235a11e14ba4901ce">@小徐</a>: CBA队员，篮球打起来，加油！<img src="memory-d2d016b347a4f7b13abf39ad.png" alt="weibo_clap" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+</ol>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="65865498e98180051f159c17">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-23T11:31:35.497+08:00">2023-12-23 11:31:35</time>
+</div>
+<div class="memory-body"><pre><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Newborn</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> height<span class="token punctuation">,</span> weight<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>height <span class="token operator">=</span> height  <span class="token comment"># 单位: 厘米</span>
+        self<span class="token punctuation">.</span>weight <span class="token operator">=</span> weight  <span class="token comment"># 单位: 千克</span>
+        self<span class="token punctuation">.</span>is_sleeping <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>is_hungry <span class="token operator">=</span> <span class="token boolean">True</span>
+        self<span class="token punctuation">.</span>needs_diaper_change <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>needs_burping <span class="token operator">=</span> <span class="token boolean">False</span>
 
-    init({
-      el: '#waline',
-      serverURL: 'https://comments.colinxu.top',
-    });
-  </script>
+    <span class="token keyword">def</span> <span class="token function">sleep</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_sleeping <span class="token operator">=</span> <span class="token boolean">True</span>
+        self<span class="token punctuation">.</span>is_hungry <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"新生儿正在睡觉。"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">wake_up</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_sleeping <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>is_hungry <span class="token operator">=</span> <span class="token boolean">True</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"新生儿醒了，可能需要喂食。"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">feed</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>is_hungry <span class="token operator">=</span> <span class="token boolean">False</span>
+        self<span class="token punctuation">.</span>needs_diaper_change <span class="token operator">=</span> <span class="token boolean">True</span>
+        self<span class="token punctuation">.</span>needs_burping <span class="token operator">=</span> <span class="token boolean">True</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"新生儿正在吃奶。"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">burp</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>needs_burping <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"新生儿拍嗝结束。"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">change_diaper</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>needs_diaper_change <span class="token operator">=</span> <span class="token boolean">False</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"尿布已更换。"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">bathe</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"新生儿洗澡。"</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">routine</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">import</span> time
+        <span class="token keyword">while</span> <span class="token boolean">True</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>wake_up<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>feed<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10</span><span class="token punctuation">)</span>  <span class="token comment"># 假设喂奶和拍嗝用时 10 秒</span>
+            self<span class="token punctuation">.</span>burp<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> self<span class="token punctuation">.</span>needs_diaper_change<span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>change_diaper<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            time<span class="token punctuation">.</span>sleep<span class="token punctuation">(</span><span class="token number">10800</span><span class="token punctuation">)</span>  <span class="token comment"># 模拟新生儿每3小时醒一次</span>
+
+
+<span class="token comment"># 示例使用</span>
+baby <span class="token operator">=</span> Newborn<span class="token punctuation">(</span><span class="token number">51.2</span><span class="token punctuation">,</span> <span class="token number">3.5</span><span class="token punctuation">)</span>  <span class="token comment"># 创建一个新生儿实例</span>
+baby<span class="token punctuation">.</span>routine<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 开始新生儿的日常生活模拟</span>
+</code></pre>
+</div>
+<p class="memory-likes">赞 · 5</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658651d735a11e14ba48e6c5">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-23T11:19:47.226+08:00">2023-12-23 11:19:47</time>
+</div>
+<div class="memory-body"><p>新装备！<br>
+<img src="memory-48da3eaafdea747e735c2928.jpg" alt="IMG_6893.jpeg" width="550" height="704" loading="lazy" decoding="async"></p>
+</div>
+<p class="memory-likes">赞 · 10</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="6586543f35a11e14ba48e75a">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-23T11:30:06.527+08:00">2023-12-23 11:30:06</time>
+</div>
+<div class="memory-body"><p><a href="#658651d735a11e14ba48e6c5">@小徐</a>: 哈哈，感觉好有范儿！帅<img src="memory-f5d8cc46f76f2ecf028f22d0.png" alt="weibo_joy" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a309fe98180051f169bb9">
+<div class="memory-meta">
+<span class="memory-author">老徐</span>
+<time class="memory-date" datetime="2023-12-26T09:47:10.290+08:00">2023-12-26 09:47:10</time>
+</div>
+<div class="memory-body"><p><a href="#658651d735a11e14ba48e6c5">@小徐</a>: 启宁，太爱学习！真捧！</p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+</ol>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="6586474fe98180051f159a9d">
+<div class="memory-meta">
+<span class="memory-author">小李</span>
+<time class="memory-date" datetime="2023-12-23T10:34:53.902+08:00">2023-12-23 10:34:53</time>
+</div>
+<div class="memory-body"><p>徐总年纪轻轻就流露出来了年纪轻轻的英姿！勇于对喂奶的水平点评，比如比🖕等等～徐总徐总棒棒！！！快快长大<img src="memory-5b7d49c63b2c538cabe6f72e.png" alt="weibo_blush" width="64" height="64" class="memory-emoji"><img src="memory-d2d016b347a4f7b13abf39ad.png" alt="weibo_clap" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 5</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="65862c9de98180051f1594f4">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-23T08:41:00.315+08:00">2023-12-23 08:41:00</time>
+</div>
+<div class="memory-body"><p>雨而晝晴乃為啓，門屏之間謂之寧。徐啓寧慢慢開啓，安寧祥和之傢風。<br>
+徐啓寧，最棒的。睁眼、抬头、吐吞…太棒！</p>
+</div>
+<p class="memory-likes">赞 · 5</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="65864a29e98180051f159aeb">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-23T10:47:04.427+08:00">2023-12-23 10:47:04</time>
+</div>
+<div class="memory-body"><p><a href="#65862c9de98180051f1594f4">@匿名</a>: 啟字写错了爸爸</p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="6587cfcde98180051f16048a">
+<div class="memory-meta">
+<span class="memory-author">老徐</span>
+<time class="memory-date" datetime="2023-12-24T14:29:32.603+08:00">2023-12-24 14:29:32</time>
+</div>
+<div class="memory-body"><p><a href="#65864a29e98180051f159aeb">@匿名</a>: 这繁体字</p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="6585d105e98180051f157cae">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-23T02:10:11.405+08:00">2023-12-23 02:10:11</time>
+</div>
+<div class="memory-body"><p>看我小手指<br>
+<img src="memory-d06f1f11dd616afefd94cbd8.jpg" alt="IMG_6887.jpeg" width="578" height="770" loading="lazy" decoding="async"></p>
+</div>
+<p class="memory-likes">赞 · 7</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="6586559be98180051f159c30">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-23T11:35:54.092+08:00">2023-12-23 11:35:54</time>
+</div>
+<div class="memory-body"><p><a href="#6585d105e98180051f157cae">@小徐</a>: 喂奶的人比吃奶的人认真<img src="memory-9a1202ff28b1e983d8c8282f.png" alt="weibo_grin" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 4</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="658a33ade98180051f169c06">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-26T10:00:12.055+08:00">2023-12-26 10:00:12</time>
+</div>
+<div class="memory-body"><p><a href="#6586559be98180051f159c30">@匿名</a>: 每次看到这个都觉得宝贝爸爸是个认真优秀的人，做什么都优秀的样子🫡</p>
+</div>
+<p class="memory-likes">赞 · 0</p>
+</article>
+</li>
+</ol>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a3125e98180051f169bc4">
+<div class="memory-meta">
+<span class="memory-author">老徐</span>
+<time class="memory-date" datetime="2023-12-26T09:49:24.727+08:00">2023-12-26 09:49:24</time>
+</div>
+<div class="memory-body"><p><a href="#6585d105e98180051f157cae">@小徐</a>: 为奶爸，点👍</p>
+</div>
+<p class="memory-likes">赞 · 2</p>
+</article>
+</li>
+</ol>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="6585c18c35a11e14ba48c0d7">
+<div class="memory-meta">
+<span class="memory-author">小徐</span>
+<time class="memory-date" datetime="2023-12-23T01:04:08.498+08:00">2023-12-23 01:04:08</time>
+</div>
+<div class="memory-body"><p><img src="memory-fa713afb3c2e1d5a6eae14f1.jpg" alt="xixixi.jpg" width="1103" height="1114" loading="lazy" decoding="async"></p>
+</div>
+<p class="memory-likes">赞 · 7</p>
+</article>
+<ol class="memory-replies" aria-label="回复">
+<li class="memory-thread"><article class="memory-comment" id="6586563a35a11e14ba48e78c">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-23T11:38:33.321+08:00">2023-12-23 11:38:33</time>
+</div>
+<div class="memory-body"><p><a href="#6585c18c35a11e14ba48c0d7">@小徐</a>: 宝贝感觉这里有点好玩吧<img src="memory-732f79a040b32ae20e514d5d.png" alt="weibo_laugh" width="64" height="64" class="memory-emoji"></p>
+</div>
+<p class="memory-likes">赞 · 4</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a31aa35a11e14ba49e8a3">
+<div class="memory-meta">
+<span class="memory-author">老徐</span>
+<time class="memory-date" datetime="2023-12-26T09:51:37.308+08:00">2023-12-26 09:51:37</time>
+</div>
+<div class="memory-body"><p><a href="#6585c18c35a11e14ba48c0d7">@小徐</a>: 启宁，太聪明，真有趣！</p>
+</div>
+<p class="memory-likes">赞 · 2</p>
+</article>
+</li>
+<li class="memory-thread"><article class="memory-comment" id="658a32c6e98180051f169bed">
+<div class="memory-meta">
+<span class="memory-author">匿名</span>
+<time class="memory-date" datetime="2023-12-26T09:56:21.799+08:00">2023-12-26 09:56:21</time>
+</div>
+<div class="memory-body"><p><a href="#6585c18c35a11e14ba48c0d7">@小徐</a>: 每次看到宝贝这个照片，都很愉悦，被你治愈了🥰</p>
+</div>
+<p class="memory-likes">赞 · 3</p>
+</article>
+</li>
+</ol>
+</li>
+    </ol>
+  </section>
     <section class="contact" id="contact">
     <div class="email-block">
     <h2>联系我</h2>
